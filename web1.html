@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정수 5개 입력받아 역순으로 출력</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        hr { margin: 20px 0; }
+        .result-label { font-weight: bold; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <h3>정수 5개 입력받아 역순으로 출력</h3>
+    <hr>
+
+    <div id="original">
+        <div class="result-label">입력된 수의 배열</div>
+        <span id="original-array"></span>
+    </div>
+
+    <hr>
+
+    <div id="reversed">
+        <div class="result-label">역순으로 재정렬된 배열</div>
+        <span id="reversed-array"></span>
+    </div>
+
+    <script>
+        let numbers = [];
+
+        for (let i = 0; i < 5; i++) {
+            let input = prompt("정수 입력");
+            numbers.push(Number(input));
+        }
+        document.getElementById("original-array").innerText = numbers.join(" ");
+        numbers.reverse();
+        document.getElementById("reversed-array").innerText = numbers.join(" ");
+    </script>
+
+</body>
+</html>
